@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Ole&display=swap");
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -45,5 +47,126 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+/* beginning of custom styling */
+
+/* font stlying */
+.ole-regular-font {
+  font-family: "Ole", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Ole", cursive;
+  font-size: 34px;
+  font-weight: bold;
+}
+h2 {
+  font-family: "Ole", cursive;
+  font-size: 30px;
+  font-weight: bold;
+}
+h3 {
+  font-family: "Ole", cursive;
+  font-size: 24px;
+  font-weight: bold;
+}
+h4 {
+  font-family: "Ole", cursive;
+  font-size: 20px;
+  font-weight: bold;
+}
+h5 {
+  font-family: "Ole", cursive;
+  font-size: 18px;
+  font-weight: bold;
+}
+h6 {
+  font-family: "Ole", cursive;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* header styling */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content:center ;
+  align-items: center;
+}
+
+/* gallery component stying */
+.gallery-arrow {
+  display: none;
+}
+
+
+@media screen and (max-width: 991px) {
+  .gallery-wrapper {
+    position: relative;
+  }
+
+  .gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-img {
+    width: 250px;
+    height: auto;
+    margin: 5px;
+    flex-shrink: 0;
+  }
+
+  .gallery-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .gallery-arrow.left {
+    left: 10px;
+  }
+
+  .gallery-arrow.right {
+    right: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .gallery-img {
+    width: 250px;
+    height: auto;
+    margin: 5px;
   }
 }
