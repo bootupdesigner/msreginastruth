@@ -31,6 +31,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   background: url("https://res.cloudinary.com/dhhnhfcrw/image/upload/v1780572733/Grace/Messenger_creation_AE1E06EE-1AD4-4C57-9879-661F3E3F5006_tyrlvo.jpg") fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 * {
@@ -52,6 +56,9 @@ a {
 
 /* beginning of custom styling */
 
+/* main section styling */
+
+
 /* font stlying */
 .ole-regular-font {
   font-family: "Ole", cursive;
@@ -61,49 +68,65 @@ a {
 
 h1 {
   font-family: "Ole", cursive;
-  font-size: 34px;
+  font-size: 60px;
   font-weight: bold;
+  color: white;
 }
 h2 {
   font-family: "Ole", cursive;
   font-size: 30px;
+  color: white;
   font-weight: bold;
 }
 h3 {
   font-family: "Ole", cursive;
   font-size: 24px;
   font-weight: bold;
+  color: white;
 }
 h4 {
   font-family: "Ole", cursive;
   font-size: 20px;
   font-weight: bold;
+  color: white;
 }
 h5 {
   font-family: "Ole", cursive;
   font-size: 18px;
   font-weight: bold;
+  color: white;
 }
 h6 {
   font-family: "Ole", cursive;
   font-size: 16px;
   font-weight: bold;
+  color: white;
+}
+p{
+  color: white;
 }
 
-
 /* header styling */
-header {
+.header {
   display: flex;
   flex-direction: column;
-  justify-content:center ;
+  justify-content: center;
   align-items: center;
+  background-color: transparent;
+}
+
+/* social icon */
+.social-icons a {
+  color: black;
+  font: 24px;
+  cursor: pointer;
+  margin: 5px;
 }
 
 /* gallery component stying */
 .gallery-arrow {
   display: none;
 }
-
 
 @media screen and (max-width: 991px) {
   .gallery-wrapper {

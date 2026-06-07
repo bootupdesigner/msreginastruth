@@ -13,12 +13,6 @@ const images = [
         description: ``
     },
     {
-        id: 2,
-        source: "https://res.cloudinary.com/dhhnhfcrw/image/upload/v1780572733/Grace/Messenger_creation_AE1E06EE-1AD4-4C57-9879-661F3E3F5006_tyrlvo.jpg",
-        alt: ``,
-        description: ``
-    },
-    {
         id: 3,
         source: "https://res.cloudinary.com/dhhnhfcrw/image/upload/v1780572732/Grace/Messenger_creation_A0C139C6-E13A-4747-B579-2FE51C9FED5C_uqseya.jpg",
         alt: ``,
@@ -66,7 +60,7 @@ const images = [
         alt: ``,
         description: ``
     },
-    
+
     {
         id: 11,
         source: "https://res.cloudinary.com/dhhnhfcrw/image/upload/v1780572734/Grace/Messenger_creation_4E1B499C-58A9-45B4-9690-971B5F5AECA2_yne0t3.jpg",
@@ -75,60 +69,60 @@ const images = [
     },
 ]
 function Gallery() {
-  const galleryRef = useRef(null)
+    const galleryRef = useRef(null)
 
-  const scrollLeft = () => {
-    galleryRef.current?.scrollBy({
-      left: -300,
-      behavior: 'smooth',
-    })
-  }
+    const scrollLeft = () => {
+        galleryRef.current?.scrollBy({
+            left: -300,
+            behavior: 'smooth',
+        })
+    }
 
-  const scrollRight = () => {
-    galleryRef.current?.scrollBy({
-      left: 300,
-      behavior: 'smooth',
-    })
-  }
+    const scrollRight = () => {
+        galleryRef.current?.scrollBy({
+            left: 300,
+            behavior: 'smooth',
+        })
+    }
 
-  return (
-    <div>
-      <h2 className="text-left ole-regular-font">Gallery</h2>
+    return (
+        <div className='container'>
+            <h2 className="text-left" style={{ color: 'white', fontSize: 54 }}>Gallery</h2>
 
-      <div className="gallery-wrapper">
-        <button
-          className="gallery-arrow left"
-          onClick={scrollLeft}
-        >
-          <ChevronLeft />
-        </button>
+            <div className="gallery-wrapper">
+                <button
+                    className="gallery-arrow left"
+                    onClick={scrollLeft}
+                >
+                    <ChevronLeft />
+                </button>
 
-        <div
-          className="gallery"
-          ref={galleryRef}
-        >
-          {images.map((image) => (
-            <figure key={image.id}>
-              <Image
-                className="gallery-img"
-                rounded
-                src={image.source}
-                alt={image.alt}
-              />
-              <figcaption>{image.description}</figcaption>
-            </figure>
-          ))}
+                <div
+                    className="gallery"
+                    ref={galleryRef}
+                >
+                    {images.map((image) => (
+                        <figure key={image.id}>
+                            <Image
+                                className="gallery-img"
+                                rounded
+                                src={image.source}
+                                alt={image.alt}
+                            />
+                            <figcaption>{image.description}</figcaption>
+                        </figure>
+                    ))}
+                </div>
+
+                <button
+                    className="gallery-arrow right"
+                    onClick={scrollRight}
+                >
+                    <ChevronRight />
+                </button>
+            </div>
         </div>
-
-        <button
-          className="gallery-arrow right"
-          onClick={scrollRight}
-        >
-          <ChevronRight />
-        </button>
-      </div>
-    </div>
-  )
+    )
 }
 
 export default Gallery

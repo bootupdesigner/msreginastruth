@@ -7,11 +7,13 @@ import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <main className="container py-5">
-      <section>
-        <Header />
+    <div>
+      <header>
+        <Header/>
+      </header>
+      <main>
         <Gallery />
-      </section>
-    </main>
+      </main>
+    </div>
   )
 }
