@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Ms Reginas Truth",
+  title: "Ms Regina's Truth",
   description: "For The People Record",
 };
 

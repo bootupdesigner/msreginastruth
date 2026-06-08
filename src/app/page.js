@@ -1,5 +1,6 @@
 'use client'
 
+import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import Header from "@/components/Header";
 import Videos from "@/components/Videos";
@@ -14,6 +15,9 @@ export default function Home() {
         <Videos />
         <Gallery />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   )
 }

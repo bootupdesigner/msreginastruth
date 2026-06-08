@@ -31,7 +31,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-   background: url("https://res.cloudinary.com/dhhnhfcrw/image/upload/v1780572733/Grace/Messenger_creation_AE1E06EE-1AD4-4C57-9879-661F3E3F5006_tyrlvo.jpg") fixed;
+  background: url("https://res.cloudinary.com/dhhnhfcrw/image/upload/v1780572733/Grace/Messenger_creation_AE1E06EE-1AD4-4C57-9879-661F3E3F5006_tyrlvo.jpg")
+    fixed;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -58,7 +59,6 @@ a {
 
 /* main section styling */
 
-
 /* font stlying */
 .ole-regular-font {
   font-family: "Ole", cursive;
@@ -81,7 +81,7 @@ h2 {
 h3 {
   color: white;
   font-family: "Ole", cursive;
-  font-size: 48px;
+  font-size: 42px;
   font-weight: bold;
 }
 h4 {
@@ -102,7 +102,8 @@ h6 {
   font-weight: bold;
   color: white;
 }
-p, .videos h5{
+p,
+.videos h5 {
   color: white;
   font-size: 30px;
 }
@@ -124,12 +125,37 @@ p, .videos h5{
   margin: 5px;
 }
 
+.menu-icon {
+  font-size: 24px;
+  color: white;
+}
+
 /* gallery component stying */
 .gallery-arrow {
   display: none;
 }
+/* responsive screen styling */
 
-@media screen and (max-width: 991px) {
+/* small screen styling */
+@media only screen and (max-width: 480px) {
+  iframe {
+    height: 180px;
+    width: 320px;
+  }
+
+  .videos {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .videos div {
+    width: 320px;
+  }
+
+  /* gallery styling for phone size screen */
+
   .gallery-wrapper {
     position: relative;
   }
@@ -179,17 +205,103 @@ p, .videos h5{
   .gallery-arrow.right {
     right: 10px;
   }
-
-    /* video component styling */
-.videos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 }
 
-@media screen and (min-width: 992px) {
+/* tablet size screen styling */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  /* styling for videos on tablet size screen */
+
+  .videos {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .videos div {
+    width: 480px;
+  }
+
+  iframe {
+    height: 270px;
+    width: 480px;
+  }
+
+  /* gallery styling for tablet size screen */
+
+  .gallery-wrapper {
+    position: relative;
+  }
+
+  .gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-img {
+    width: 250px;
+    height: auto;
+    margin: 5px;
+    flex-shrink: 0;
+  }
+
+  .gallery-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .gallery-arrow.left {
+    left: 10px;
+  }
+
+  .gallery-arrow.right {
+    right: 10px;
+  }
+}
+
+/* laptop size screen styling */
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+
+  /* styling for videos on laptop screen */
+
+   .videos {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .videos div {
+    width: 560px;
+  }
+
+ iframe {
+    height: 315px;
+    width: 560px;
+  }
+  /* gallery styling for laptop size screen */
+
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -201,12 +313,71 @@ p, .videos h5{
     height: auto;
     margin: 5px;
   }
+}
 
-  /* video component styling */
-  .videos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+/* larger screen styling */
+@media only screen and (min-width: 1280px) {
+   /* styling for videos on laptop screen */
+
+   .videos {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .videos div {
+    width: 480px;
+  }
+ iframe {
+    height: 270px;
+    width: 480px;
+  }
+
+  /* gallery styling for laptop size screen */
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .gallery-img {
+    width: 250px;
+    height: auto;
+    margin: 5px;
   }
 }
 
+/* footer styling */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  font-family: "Ole", cursive;
+  font-size: 36px;
+  padding: 0;
+  margin: 0;
+}
+
+footer p {
+  margin: 0;
+  padding: 10px 0;
+  font-family: "Ole", cursive;
+  text-align: center;
+}
+
+footer a {
+  text-align: center;
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+footer a:hover {
+  color: white !important;
+}

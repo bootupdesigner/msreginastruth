@@ -87,7 +87,7 @@ function Gallery() {
 
     return (
         <div className='container'>
-            <h2 className="text-left" style={{ color: 'white', fontSize: 54 }}>Gallery</h2>
+            <h2 className="text-left" style={{ color: 'white', fontSize: 52 ,fontWeight:'bold',}}>Gallery</h2>
 
             <div className="gallery-wrapper">
                 <button
