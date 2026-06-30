@@ -10,7 +10,8 @@ function Banner() {
             style={{
                 display: 'flex',
                 flexDirection: 'row',
-                justifyContent: 'space-evenly'
+                justifyContent: 'space-evenly',
+                flexWrap:'wrap'
             }}
         >
             <div style={{ position: 'relative' }}>
