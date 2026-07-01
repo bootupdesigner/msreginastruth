@@ -1,6 +1,7 @@
 'use client'
 
-import Banner from "@/components/Banner";
+import Books from "@/components/Books";
+import Discography from "@/components/Discography";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import Header from "@/components/Header";
@@ -14,8 +15,9 @@ export default function Home() {
       </header>
       <main>
         <Videos />
+        <Discography />
         <Gallery />
-        <Banner />
+        <Books />
       </main>
       <footer>
         <Footer />
